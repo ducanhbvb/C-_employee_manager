@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeManager
+﻿namespace EmployeeManager
 {
     public class BankAccount
     {
-        private int id;
-        private int accountNumber;
-        private string nameBanks;
-        private string bankBranch;
-        private string note;
-
-      
+        public int Id { get; set; }
+        public int Code { get; set; }
+        public int EmployeeId { get; set; }
+        public string Name { get; set; }
+        public string Branch { get; set; }
+        public string Note { get; set; }
     }
 }

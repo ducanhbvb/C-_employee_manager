@@ -1,36 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmployeeManager
 {
     public class Employee
     {
-        private int id;
-        private string name;
-        private string gender;
-        private DateTime dateOfBrith;
-        private BankAccount bankAccount;
-        private Decimal basicSalary;
         public int Id { get; set; }
+        public string Code { get; set; }
         public string Name { get; set; }
-        public string Gender { get; set; }
+        public bool Gender { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
         public DateTime DateOfBrith { get; set; }
-        public BankAccount[] BankAccount { get; set; }
-        public string BasicSalary { get; set; }
-
-
-        public new void totring()
+        public string Age
         {
-            Console.WriteLine("id :{0}",this.id);
-            Console.WriteLine("id :{0}", this.name);
-            Console.WriteLine("id :{0}", this.gender);
-            Console.WriteLine("id :{0}", this.dateOfBrith);
-            Console.WriteLine("id :{0}", this.basicSalary);
-            Console.WriteLine("id :{0}", this.id);
+            get { return string.Format("{0}", DateTime.Now.Year - DateOfBrith.Year);}
         }
-
+        public int CMND { get; set; }
+        public DateTime IssuedDate { get; set; }
+        public string IssuedAddress { get; set; }
+        public byte[] Avatar { get; set; }
+        public Decimal BasicSalary { get; set; }
     }
 }
